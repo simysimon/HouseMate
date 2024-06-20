@@ -1,0 +1,587 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		0AFCF7EA2C1CC33900018FCF /* HouseMateApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AFCF7E92C1CC33900018FCF /* HouseMateApp.swift */; };
+		0AFCF7EC2C1CC33900018FCF /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AFCF7EB2C1CC33900018FCF /* ContentView.swift */; };
+		0AFCF7EE2C1CC33B00018FCF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0AFCF7ED2C1CC33B00018FCF /* Assets.xcassets */; };
+		0AFCF7F12C1CC33B00018FCF /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0AFCF7F02C1CC33B00018FCF /* Preview Assets.xcassets */; };
+		0AFCF7FB2C1CC33B00018FCF /* HouseMateTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AFCF7FA2C1CC33B00018FCF /* HouseMateTests.swift */; };
+		0AFCF8052C1CC33B00018FCF /* HouseMateUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AFCF8042C1CC33B00018FCF /* HouseMateUITests.swift */; };
+		0AFCF8072C1CC33B00018FCF /* HouseMateUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AFCF8062C1CC33B00018FCF /* HouseMateUITestsLaunchTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		0AFCF7F72C1CC33B00018FCF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0AFCF7DE2C1CC33900018FCF /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 0AFCF7E52C1CC33900018FCF;
+			remoteInfo = HouseMate;
+		};
+		0AFCF8012C1CC33B00018FCF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0AFCF7DE2C1CC33900018FCF /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 0AFCF7E52C1CC33900018FCF;
+			remoteInfo = HouseMate;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		0AFCF7E62C1CC33900018FCF /* HouseMate.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HouseMate.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		0AFCF7E92C1CC33900018FCF /* HouseMateApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HouseMateApp.swift; sourceTree = "<group>"; };
+		0AFCF7EB2C1CC33900018FCF /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		0AFCF7ED2C1CC33B00018FCF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		0AFCF7F02C1CC33B00018FCF /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		0AFCF7F62C1CC33B00018FCF /* HouseMateTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HouseMateTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		0AFCF7FA2C1CC33B00018FCF /* HouseMateTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HouseMateTests.swift; sourceTree = "<group>"; };
+		0AFCF8002C1CC33B00018FCF /* HouseMateUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HouseMateUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		0AFCF8042C1CC33B00018FCF /* HouseMateUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HouseMateUITests.swift; sourceTree = "<group>"; };
+		0AFCF8062C1CC33B00018FCF /* HouseMateUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HouseMateUITestsLaunchTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		0AFCF7E32C1CC33900018FCF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0AFCF7F32C1CC33B00018FCF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0AFCF7FD2C1CC33B00018FCF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		0AFCF7DD2C1CC33900018FCF = {
+			isa = PBXGroup;
+			children = (
+				0AFCF7E82C1CC33900018FCF /* HouseMate */,
+				0AFCF7F92C1CC33B00018FCF /* HouseMateTests */,
+				0AFCF8032C1CC33B00018FCF /* HouseMateUITests */,
+				0AFCF7E72C1CC33900018FCF /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		0AFCF7E72C1CC33900018FCF /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				0AFCF7E62C1CC33900018FCF /* HouseMate.app */,
+				0AFCF7F62C1CC33B00018FCF /* HouseMateTests.xctest */,
+				0AFCF8002C1CC33B00018FCF /* HouseMateUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		0AFCF7E82C1CC33900018FCF /* HouseMate */ = {
+			isa = PBXGroup;
+			children = (
+				0AFCF7E92C1CC33900018FCF /* HouseMateApp.swift */,
+				0AFCF7EB2C1CC33900018FCF /* ContentView.swift */,
+				0AFCF7ED2C1CC33B00018FCF /* Assets.xcassets */,
+				0AFCF7EF2C1CC33B00018FCF /* Preview Content */,
+			);
+			path = HouseMate;
+			sourceTree = "<group>";
+		};
+		0AFCF7EF2C1CC33B00018FCF /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				0AFCF7F02C1CC33B00018FCF /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		0AFCF7F92C1CC33B00018FCF /* HouseMateTests */ = {
+			isa = PBXGroup;
+			children = (
+				0AFCF7FA2C1CC33B00018FCF /* HouseMateTests.swift */,
+			);
+			path = HouseMateTests;
+			sourceTree = "<group>";
+		};
+		0AFCF8032C1CC33B00018FCF /* HouseMateUITests */ = {
+			isa = PBXGroup;
+			children = (
+				0AFCF8042C1CC33B00018FCF /* HouseMateUITests.swift */,
+				0AFCF8062C1CC33B00018FCF /* HouseMateUITestsLaunchTests.swift */,
+			);
+			path = HouseMateUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		0AFCF7E52C1CC33900018FCF /* HouseMate */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0AFCF80A2C1CC33B00018FCF /* Build configuration list for PBXNativeTarget "HouseMate" */;
+			buildPhases = (
+				0AFCF7E22C1CC33900018FCF /* Sources */,
+				0AFCF7E32C1CC33900018FCF /* Frameworks */,
+				0AFCF7E42C1CC33900018FCF /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = HouseMate;
+			productName = HouseMate;
+			productReference = 0AFCF7E62C1CC33900018FCF /* HouseMate.app */;
+			productType = "com.apple.product-type.application";
+		};
+		0AFCF7F52C1CC33B00018FCF /* HouseMateTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0AFCF80D2C1CC33B00018FCF /* Build configuration list for PBXNativeTarget "HouseMateTests" */;
+			buildPhases = (
+				0AFCF7F22C1CC33B00018FCF /* Sources */,
+				0AFCF7F32C1CC33B00018FCF /* Frameworks */,
+				0AFCF7F42C1CC33B00018FCF /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				0AFCF7F82C1CC33B00018FCF /* PBXTargetDependency */,
+			);
+			name = HouseMateTests;
+			productName = HouseMateTests;
+			productReference = 0AFCF7F62C1CC33B00018FCF /* HouseMateTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		0AFCF7FF2C1CC33B00018FCF /* HouseMateUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0AFCF8102C1CC33B00018FCF /* Build configuration list for PBXNativeTarget "HouseMateUITests" */;
+			buildPhases = (
+				0AFCF7FC2C1CC33B00018FCF /* Sources */,
+				0AFCF7FD2C1CC33B00018FCF /* Frameworks */,
+				0AFCF7FE2C1CC33B00018FCF /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				0AFCF8022C1CC33B00018FCF /* PBXTargetDependency */,
+			);
+			name = HouseMateUITests;
+			productName = HouseMateUITests;
+			productReference = 0AFCF8002C1CC33B00018FCF /* HouseMateUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		0AFCF7DE2C1CC33900018FCF /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1540;
+				LastUpgradeCheck = 1540;
+				TargetAttributes = {
+					0AFCF7E52C1CC33900018FCF = {
+						CreatedOnToolsVersion = 15.4;
+					};
+					0AFCF7F52C1CC33B00018FCF = {
+						CreatedOnToolsVersion = 15.4;
+						TestTargetID = 0AFCF7E52C1CC33900018FCF;
+					};
+					0AFCF7FF2C1CC33B00018FCF = {
+						CreatedOnToolsVersion = 15.4;
+						TestTargetID = 0AFCF7E52C1CC33900018FCF;
+					};
+				};
+			};
+			buildConfigurationList = 0AFCF7E12C1CC33900018FCF /* Build configuration list for PBXProject "HouseMate" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 0AFCF7DD2C1CC33900018FCF;
+			productRefGroup = 0AFCF7E72C1CC33900018FCF /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				0AFCF7E52C1CC33900018FCF /* HouseMate */,
+				0AFCF7F52C1CC33B00018FCF /* HouseMateTests */,
+				0AFCF7FF2C1CC33B00018FCF /* HouseMateUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		0AFCF7E42C1CC33900018FCF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0AFCF7F12C1CC33B00018FCF /* Preview Assets.xcassets in Resources */,
+				0AFCF7EE2C1CC33B00018FCF /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0AFCF7F42C1CC33B00018FCF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0AFCF7FE2C1CC33B00018FCF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		0AFCF7E22C1CC33900018FCF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0AFCF7EC2C1CC33900018FCF /* ContentView.swift in Sources */,
+				0AFCF7EA2C1CC33900018FCF /* HouseMateApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0AFCF7F22C1CC33B00018FCF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0AFCF7FB2C1CC33B00018FCF /* HouseMateTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0AFCF7FC2C1CC33B00018FCF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0AFCF8072C1CC33B00018FCF /* HouseMateUITestsLaunchTests.swift in Sources */,
+				0AFCF8052C1CC33B00018FCF /* HouseMateUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		0AFCF7F82C1CC33B00018FCF /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 0AFCF7E52C1CC33900018FCF /* HouseMate */;
+			targetProxy = 0AFCF7F72C1CC33B00018FCF /* PBXContainerItemProxy */;
+		};
+		0AFCF8022C1CC33B00018FCF /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 0AFCF7E52C1CC33900018FCF /* HouseMate */;
+			targetProxy = 0AFCF8012C1CC33B00018FCF /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		0AFCF8082C1CC33B00018FCF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		0AFCF8092C1CC33B00018FCF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		0AFCF80B2C1CC33B00018FCF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"HouseMate/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = fds.HouseMate;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		0AFCF80C2C1CC33B00018FCF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"HouseMate/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = fds.HouseMate;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		0AFCF80E2C1CC33B00018FCF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = fds.HouseMateTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/HouseMate.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/HouseMate";
+			};
+			name = Debug;
+		};
+		0AFCF80F2C1CC33B00018FCF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = fds.HouseMateTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/HouseMate.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/HouseMate";
+			};
+			name = Release;
+		};
+		0AFCF8112C1CC33B00018FCF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = fds.HouseMateUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = HouseMate;
+			};
+			name = Debug;
+		};
+		0AFCF8122C1CC33B00018FCF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = fds.HouseMateUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = HouseMate;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		0AFCF7E12C1CC33900018FCF /* Build configuration list for PBXProject "HouseMate" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0AFCF8082C1CC33B00018FCF /* Debug */,
+				0AFCF8092C1CC33B00018FCF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		0AFCF80A2C1CC33B00018FCF /* Build configuration list for PBXNativeTarget "HouseMate" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0AFCF80B2C1CC33B00018FCF /* Debug */,
+				0AFCF80C2C1CC33B00018FCF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		0AFCF80D2C1CC33B00018FCF /* Build configuration list for PBXNativeTarget "HouseMateTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0AFCF80E2C1CC33B00018FCF /* Debug */,
+				0AFCF80F2C1CC33B00018FCF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		0AFCF8102C1CC33B00018FCF /* Build configuration list for PBXNativeTarget "HouseMateUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0AFCF8112C1CC33B00018FCF /* Debug */,
+				0AFCF8122C1CC33B00018FCF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 0AFCF7DE2C1CC33900018FCF /* Project object */;
+}
