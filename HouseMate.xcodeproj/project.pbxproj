@@ -14,6 +14,11 @@
 		0AFCF7FB2C1CC33B00018FCF /* HouseMateTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AFCF7FA2C1CC33B00018FCF /* HouseMateTests.swift */; };
 		0AFCF8052C1CC33B00018FCF /* HouseMateUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AFCF8042C1CC33B00018FCF /* HouseMateUITests.swift */; };
 		0AFCF8072C1CC33B00018FCF /* HouseMateUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AFCF8062C1CC33B00018FCF /* HouseMateUITestsLaunchTests.swift */; };
+		0AFCF84B2C2612D900018FCF /* Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AFCF84A2C2612D900018FCF /* Home.swift */; };
+		0AFCF84D2C2612E200018FCF /* Tasks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AFCF84C2C2612E200018FCF /* Tasks.swift */; };
+		0AFCF84F2C2612EC00018FCF /* Expenses.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AFCF84E2C2612EC00018FCF /* Expenses.swift */; };
+		0AFCF8512C26130100018FCF /* Events.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AFCF8502C26130100018FCF /* Events.swift */; };
+		0AFCF8532C26148400018FCF /* common.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AFCF8522C26148400018FCF /* common.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +49,11 @@
 		0AFCF8002C1CC33B00018FCF /* HouseMateUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HouseMateUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0AFCF8042C1CC33B00018FCF /* HouseMateUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HouseMateUITests.swift; sourceTree = "<group>"; };
 		0AFCF8062C1CC33B00018FCF /* HouseMateUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HouseMateUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		0AFCF84A2C2612D900018FCF /* Home.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Home.swift; sourceTree = "<group>"; };
+		0AFCF84C2C2612E200018FCF /* Tasks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tasks.swift; sourceTree = "<group>"; };
+		0AFCF84E2C2612EC00018FCF /* Expenses.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Expenses.swift; sourceTree = "<group>"; };
+		0AFCF8502C26130100018FCF /* Events.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Events.swift; sourceTree = "<group>"; };
+		0AFCF8522C26148400018FCF /* common.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = common.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,8 +104,10 @@
 		0AFCF7E82C1CC33900018FCF /* HouseMate */ = {
 			isa = PBXGroup;
 			children = (
+				0AFCF8492C2612B100018FCF /* Tabs */,
 				0AFCF7E92C1CC33900018FCF /* HouseMateApp.swift */,
 				0AFCF7EB2C1CC33900018FCF /* ContentView.swift */,
+				0AFCF8522C26148400018FCF /* common.swift */,
 				0AFCF7ED2C1CC33B00018FCF /* Assets.xcassets */,
 				0AFCF7EF2C1CC33B00018FCF /* Preview Content */,
 			);
@@ -125,6 +137,17 @@
 				0AFCF8062C1CC33B00018FCF /* HouseMateUITestsLaunchTests.swift */,
 			);
 			path = HouseMateUITests;
+			sourceTree = "<group>";
+		};
+		0AFCF8492C2612B100018FCF /* Tabs */ = {
+			isa = PBXGroup;
+			children = (
+				0AFCF84A2C2612D900018FCF /* Home.swift */,
+				0AFCF84C2C2612E200018FCF /* Tasks.swift */,
+				0AFCF84E2C2612EC00018FCF /* Expenses.swift */,
+				0AFCF8502C26130100018FCF /* Events.swift */,
+			);
+			path = Tabs;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -257,7 +280,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0AFCF8532C26148400018FCF /* common.swift in Sources */,
+				0AFCF8512C26130100018FCF /* Events.swift in Sources */,
+				0AFCF84F2C2612EC00018FCF /* Expenses.swift in Sources */,
+				0AFCF84D2C2612E200018FCF /* Tasks.swift in Sources */,
 				0AFCF7EC2C1CC33900018FCF /* ContentView.swift in Sources */,
+				0AFCF84B2C2612D900018FCF /* Home.swift in Sources */,
 				0AFCF7EA2C1CC33900018FCF /* HouseMateApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

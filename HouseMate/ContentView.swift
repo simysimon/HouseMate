@@ -8,17 +8,38 @@
 import SwiftUI
 
 struct ContentView: View {
+    
+    @State private var isNight = false
+    
+    
+    
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!)
+        
+        TabView {
+            HomeView()
+                .tabItem() {
+                    Image(systemName: "house")
+                }
+            TasksView()
+                .tabItem() {
+                    Image(systemName: "checkmark.circle")
+                }
+            ExpensesView()
+                .tabItem() {
+                    Image(systemName: "dollarsign.circle")
+                }
+            EventsView()
+                .tabItem() {
+                    Image(systemName: "calendar")
+                }
+            
         }
-        .padding()
+        
+        
     }
 }
 
 #Preview {
     ContentView()
 }
+
