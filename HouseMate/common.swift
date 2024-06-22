@@ -10,57 +10,57 @@ import SwiftUI
 
 
 //this is the common header for all the views, only parameters are the title and font size
-struct Header: View {
-    var title : String
-    var size : CGFloat
-    var body: some View {
-        HStack{
-            Text(title)
-                .font(.custom("SF Pro Text", size: size))
-                .bold()
-                .padding(.leading, 20)
-                .foregroundColor(Color("text"))
-            
-            
-            
-            Button(action: {
-                print("dropdown button tapped")
-            }) {
-                Image(systemName: "chevron.down")
-                    .resizable()
-                    .aspectRatio(contentMode: .fit)
-                    .frame(width: 25, height: 25)
-                    .foregroundColor(Color("text"))
-            }
-            
-            Spacer()
-            Button(action: {
-                print("bell button tapped")
-            }) {
-                Image(systemName: "bell")
-                    .resizable()
-                    .aspectRatio(contentMode: .fit)
-                    .frame(width: 40, height: 40)
-                    .foregroundColor(Color("text"))
-            }
-            Button(action: {
-                print("profile button tapped")
-            }) {
-                Image(systemName: "person.crop.circle")
-                    .resizable()
-                    .aspectRatio(contentMode: .fill)
-                    .frame(width: 40, height: 40)
-                    .foregroundColor(Color("text"))
-            }
-            .padding()
-            
-            
-            
-            
-            
-        }
-    }
-}
+//struct Header: View {
+//    var title : String
+//    var size : CGFloat
+//    var body: some View {
+//        HStack{
+//            Text(title)
+//                .font(.custom("SF Pro Text", size: size))
+//                .bold()
+//                .padding(.leading, 20)
+//                .foregroundColor(Color("text"))
+//            
+//            
+//            
+//            Button(action: {
+//                print("dropdown button tapped")
+//            }) {
+//                Image(systemName: "chevron.down")
+//                    .resizable()
+//                    .aspectRatio(contentMode: .fit)
+//                    .frame(width: 25, height: 25)
+//                    .foregroundColor(Color("text"))
+//            }
+//            
+//            Spacer()
+//            Button(action: {
+//                print("bell button tapped")
+//            }) {
+//                Image(systemName: "bell")
+//                    .resizable()
+//                    .aspectRatio(contentMode: .fit)
+//                    .frame(width: 40, height: 40)
+//                    .foregroundColor(Color("text"))
+//            }
+//            Button(action: {
+//                print("profile button tapped")
+//            }) {
+//                Image(systemName: "person.crop.circle")
+//                    .resizable()
+//                    .aspectRatio(contentMode: .fill)
+//                    .frame(width: 40, height: 40)
+//                    .foregroundColor(Color("text"))
+//            }
+//            .padding()
+//            
+//            
+//            
+//            
+//            
+//        }
+//    }
+//}
 
 
 //this is the 2option toggle button, currently only 2 parameters for the options. should add more in future for dimensions and more options.
