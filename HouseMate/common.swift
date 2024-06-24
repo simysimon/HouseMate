@@ -118,3 +118,70 @@ struct toggleButton: View {
         
     }
 }
+
+// three button option
+struct threeToggleButton: View {
+    var optionA: String
+    var optionB: String
+    var optionC: String
+    @Binding var selectedOption: Int  // 0 for A, 1 for B, 2 for C
+
+    var body: some View {
+        ZStack {
+            // Background layer
+            RoundedRectangle(cornerRadius: 30)
+                .fill(Color("prim"))
+                .frame(width: 270, height: 40)
+
+            // Sliding highlight layer
+            RoundedRectangle(cornerRadius: 30)
+                .fill(Color("accent"))
+                .frame(width: 90, height: 30)
+                .offset(x: selectedOption == 0 ? -90 : selectedOption == 1 ? 0 : 90)
+
+            // Text buttons layer
+            HStack(spacing: 0) {
+                Button(action: {
+                    withAnimation(.easeInOut) {
+                        selectedOption = 0
+                    }
+                }) {
+                    Text(optionA)
+                        .font(.system(size: 10, weight: .bold, design: .default))
+                        .frame(width: 90, height: 25)
+                        .background(Color.clear) // Set background to clear
+                        .foregroundColor(.black)
+                        .cornerRadius(30)
+                }
+
+                Button(action: {
+                    withAnimation(.easeInOut) {
+                        selectedOption = 1
+                    }
+                }) {
+                    Text(optionB)
+                        .font(.system(size: 10, weight: .bold, design: .default))
+                        .frame(width: 90, height: 25)
+                        .background(Color.clear) // Set background to clear
+                        .foregroundColor(.black)
+                        .cornerRadius(30)
+                }
+
+                Button(action: {
+                    withAnimation(.easeInOut) {
+                        selectedOption = 2
+                    }
+                }) {
+                    Text(optionC)
+                        .font(.system(size: 10, weight: .bold, design: .default))
+                        .frame(width: 90, height: 25)
+                        .background(Color.clear) // Set background to clear
+                        .foregroundColor(.black)
+                        .cornerRadius(30)
+                }
+            }
+        }
+        .frame(width: 270, height: 40) // Adjust the size of the rectangular prism
+        .cornerRadius(30)
+    }
+}
