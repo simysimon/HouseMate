@@ -1,13 +1,67 @@
-////
-////  DataManager.swift
-////  HouseMate
-////
-////  Created by Simon Nguyen on 6/27/24.
-////
 //
-//import SwiftUI
-//import Firebase
+//  DataManager.swift
+//  HouseMate
 //
+//  Created by Simon Nguyen on 6/27/24.
+//
+
+import SwiftUI
+import Firebase
+import FirebaseFirestore
+
+
+
+func saveUser(user: User) {
+    let db = Firestore.firestore()
+    do {
+        try db.collection("users").document(user.id.uuidString).setData(from: user)
+    } catch let error {
+        print("Error writing user to Firestore: \(error)")
+    }
+}
+
+
+
+//func saveHousehold(household: Household) {
+//    let db = Firestore.firestore()
+//    do {
+//        // Save household document
+//        try db.collection("households").document(household.id.uuidString).setData(from: household)
+//        
+//        // Save subcollections
+//        for user in household.users {
+//            try db.collection("households")
+//                .document(household.id.uuidString)
+//                .collection("users")
+//                .document(user.id.uuidString)
+//                .setData(from: user)
+//        }
+//        
+//        // Similarly save tasks, expenses, and events
+//    } catch let error {
+//        print("Error writing household to Firestore: \(error)")
+//    }
+//}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 //class DataManager: ObservableObject {
 //    @Published var users: [User] = []
 //    

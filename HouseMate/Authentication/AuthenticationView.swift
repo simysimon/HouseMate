@@ -8,8 +8,10 @@
 import SwiftUI
 import FirebaseAuth
 
+
 struct AuthenticationView: View {
     @State private var isLoginMode = true
+    @State private var name = ""
     @State private var email = ""
     @State private var password = ""
     @State private var confirmPassword = ""
@@ -22,6 +24,18 @@ struct AuthenticationView: View {
                 .foregroundColor(Color("text"))
                 .padding()
 
+            if !isLoginMode{
+                TextField("Name", text: $name)
+                    .padding()
+                    .background(Color.gray.opacity(0.2))
+                    .cornerRadius(8)
+                    .keyboardType(.emailAddress)
+                    .autocapitalization(.none)
+                    .padding(.bottom, 20)
+            }
+            
+            
+            
             TextField("Email", text: $email)
                 .padding()
                 .background(Color.gray.opacity(0.2))
@@ -88,6 +102,9 @@ struct AuthenticationView: View {
                         print("account created with \(email)")
                         isLoggedIn = true
                         print("isLoggedIn set to true")
+                        
+                        let user = User(name: name)
+                        saveUser(user: user)
                     }
                     
                     

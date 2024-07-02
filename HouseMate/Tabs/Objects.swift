@@ -8,47 +8,94 @@
 import Foundation
 import SwiftUI
 import Firebase
-
-
-//class User {
-//    var id: UUID
-//    var name: String
-//    var tasks: [Task]
 //    var threshold: Int
 //    var progress: Int
 //    var isSingle: Bool //single vs recurring
 //    var isConstant: Bool //only applicable to recurring tasks: constant vs singular
 //    var interval: String //only applicable to recurring tasks
 //    var days: [String] //only applicable to
-//    
-//    
-//    init(name: String, tasks: [Task], threshold: Int, isSingle: Bool, isConstant: Bool, interval: String, days: [String]) {
-//        self.id = UUID()
-//        self.name = name
-//        self.tasks = []
-//        self.threshold = threshold
-//        self.progress = 0
-//        self.isSingle = isSingle
-//        self.isConstant = isConstant
-//        self.interval = interval
-//        self.days = []
-//    }
-//    
-//    
-//}
-//class Task {
-//    var name: String
-//    users[]
-//    threshold
-//    progress
-//    
-//    
-//    init(name: String) {
-//        self.name = name
-//    }
-//    
-//    
-//}
+//
+
+
+class User: Codable, Identifiable {
+    var id: UUID
+    var name: String
+    var tasks: [Task]
+    var expenses: [Expense]
+    var events: [Event]
+
+    
+    init(name: String) {
+        self.id = UUID()
+        self.name = name
+        self.tasks = []
+        self.expenses = []
+        self.events = []
+    }
+    
+    
+}
+class Task: Codable, Identifiable {
+    var id: UUID
+    var name: String
+    var users: [User]
+    var threshold: Int
+    var progress: Int
+    
+    
+    init(name: String, users: [User], threshold: Int) {
+        self.id = UUID()
+        self.name = name
+        self.users = users
+        self.threshold = threshold
+        self.progress = 0
+    }
+    
+    
+}
+
+class Expense: Codable, Identifiable  {
+    var id: UUID
+    var name: String
+    
+    
+    init(name: String) {
+        self.id = UUID()
+        self.name = name
+    }
+    
+    
+}
+class Event: Codable, Identifiable  {
+    var id: UUID
+    var name: String
+    
+    
+    init(name: String) {
+        self.id = UUID()
+        self.name = name
+    }
+    
+    
+}
+
+
+
+
+class Household {
+    var id: UUID
+    var name: String
+    var users: [User]
+    
+    init(name: String) {
+        self.id = UUID()
+        self.name = name
+        self.users = []
+    }
+
+}
+
+
 //
 //
 //class singleTask {
@@ -57,12 +104,12 @@ import Firebase
 //    threshold
 //    progress
 //    date
-//    
+//
 //    init(name: String) {
 //        self.name = name
 //    }
-//    
-//    
+//
+//
 //}
 //class recurringConstantTask {
 //    var name: String
@@ -70,12 +117,12 @@ import Firebase
 //    threshold
 //    progress
 //    interval
-//    
+//
 //    init(name: String) {
 //        self.name = name
 //    }
-//    
-//    
+//
+//
 //}
 //class recurringSingularTask {
 //    var name: String
@@ -84,46 +131,14 @@ import Firebase
 //    progress
 //    interval
 //    days
-//    
-//    init(name: String) {
-//        self.name = name
-//    }
-//    
-//    
-//}
 //
-//class Expense {
-//    var name: String
-//    
-//    
 //    init(name: String) {
 //        self.name = name
 //    }
-//    
-//    
-//}
-//class Event {
-//    var name: String
-//    
-//    
-//    init(name: String) {
-//        self.name = name
-//    }
-//    
-//    
-//}
-
-
-
-
-//class Household {
-//    var name: String
-//    var users: User[]
+//
 //
 //}
-
-
-
+//
 
 
 //-------------------------------------------------------------------------------

@@ -10,7 +10,7 @@ import Foundation
 import SwiftUI
 
 // Define the Event struct
-struct Event: Hashable {
+struct Eventt: Hashable {
     let id = UUID()
     let date: Date
     let description: String
@@ -45,11 +45,11 @@ struct EventsView: View {
     @State private var isDropdown = false
 
     // Placeholder for future user-created events
-    @State private var events: [Event] = [
-        Event(date: Calendar.current.date(byAdding: .day, value: -3, to: Date())!, description: "Deep Clean"),
-        Event(date: Calendar.current.date(byAdding: .day, value: -3, to: Date())!, description: "Deep poo"),
-        Event(date: Calendar.current.date(byAdding: .day, value: 3, to: Date())!, description: "House Meeting"),
-        Event(date: Calendar.current.date(byAdding: .day, value: 5, to: Date())!, description: "Party")
+    @State private var events: [Eventt] = [
+        Eventt(date: Calendar.current.date(byAdding: .day, value: -3, to: Date())!, description: "Deep Clean"),
+        Eventt(date: Calendar.current.date(byAdding: .day, value: -3, to: Date())!, description: "Deep poo"),
+        Eventt(date: Calendar.current.date(byAdding: .day, value: 3, to: Date())!, description: "House Meeting"),
+        Eventt(date: Calendar.current.date(byAdding: .day, value: 5, to: Date())!, description: "Party")
     ]
 
     var body: some View {
@@ -137,8 +137,8 @@ struct EventsView: View {
                             .mapValues { $0.map { $0.description } }
                         
                         // Convert eventsDict to [Event]
-                        let events = eventsDict.flatMap { (date, descriptions) -> [Event] in
-                            descriptions.map { Event(date: date, description: $0) }
+                        let events = eventsDict.flatMap { (date, descriptions) -> [Eventt] in
+                            descriptions.map { Eventt(date: date, description: $0) }
                         }
 
                         // Use WeekView with events array
@@ -179,13 +179,13 @@ struct EventsView: View {
 
 // Calendar
 struct CalendarView: View {
-    let events: [Event] // Array of event dates
+    let events: [Eventt] // Array of event dates
     @Binding var selectedDate: Date?
     @Binding var currentMonth: Date  // Binding to track the current month
     let calendar = Calendar.current
     let dateFormatter: DateFormatter
 
-    init(events: [Event], selectedDate: Binding<Date?>, currentMonth: Binding<Date>) {
+    init(events: [Eventt], selectedDate: Binding<Date?>, currentMonth: Binding<Date>) {
         self.events = events
         self._selectedDate = selectedDate
         self._currentMonth = currentMonth
@@ -308,7 +308,7 @@ struct CalendarView: View {
 
 // WeekView using placeholder events directly
 struct WeekView: View {
-    let events: [Event]
+    let events: [Eventt]
 
     private func getDaysInWeek() -> [Date] {
         guard let weekInterval = Calendar.current.dateInterval(of: .weekOfYear, for: Date()) else {
