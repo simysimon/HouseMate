@@ -21,6 +21,7 @@ class AppDelegate: NSObject, UIApplicationDelegate {
 struct HouseMateApp: App {
     
     @State private var isLoggedIn = false
+    @State private var isOnboard = false
     
     // register app delegate for Firebase setup
     @UIApplicationDelegateAdaptor(AppDelegate.self) var delegate
@@ -30,8 +31,12 @@ struct HouseMateApp: App {
         WindowGroup {
             
             
-            if isLoggedIn {
-                HouseholdView()
+            if isLoggedIn{
+                if isOnboard{
+                    MainView()
+                } else {
+                    HouseholdView(isOnboard: $isOnboard)
+                }
             } else {
                 OnboardingView(isLoggedIn: $isLoggedIn)
             }

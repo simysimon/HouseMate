@@ -88,8 +88,9 @@ struct OnboardingPageView: View {
 
 struct OnboardingView_Previews: PreviewProvider {
     @State static var isLoggedIn = false
+    @State static var isOnboard = false
     static var previews: some View {
-        HouseholdView()
+        HouseholdView(isOnboard: $isOnboard)
     }
 }
 
@@ -99,6 +100,7 @@ struct OnboardingView_Previews: PreviewProvider {
 struct HouseholdView: View {
     @State private var isLoginMode = true
     @State private var isJoin = false
+    @Binding var isOnboard: Bool
     
     
     var body: some View {
@@ -120,7 +122,7 @@ struct HouseholdView: View {
                     JoinView()
                         .transition(.move(edge: .leading))
                 } else {
-                    CreateView()
+                    CreateView(isOnboard: $isOnboard)
                         .transition(.move(edge: .trailing))
     
                 }
@@ -175,6 +177,7 @@ struct CreateView: View {
     @State private var name = ""
     @State private var groupName = ""
     @State private var groups: [String] = ["Basement", "1st Floor", "2nd Floor", "3rd Floor"]
+    @Binding var isOnboard: Bool
     
     let columns = [
         GridItem(.adaptive(minimum: 100, maximum: .infinity), spacing: 20)
@@ -264,6 +267,9 @@ struct CreateView: View {
         Button(action: {
             let household = Household(name: name, groups: groups)
             saveHousehold(household: household)
+            
+            isOnboard = true
+            print("isOnboard set to true")
         }) {
             Text("Create Household")
                 .bold()
