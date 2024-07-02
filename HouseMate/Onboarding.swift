@@ -86,11 +86,12 @@ struct OnboardingPageView: View {
     }
 }
 
-//struct OnboardingView_Previews: PreviewProvider {
-//    static var previews: some View {
-//       // OnboardingView(isLoggedIn: $isLoggedIn)
-//    }
-//}
+struct OnboardingView_Previews: PreviewProvider {
+    @State static var isLoggedIn = false
+    static var previews: some View {
+        HouseholdView()
+    }
+}
 
 
 
@@ -171,6 +172,15 @@ struct JoinView: View {
 }
 
 struct CreateView: View {
+    @State private var name = ""
+    @State private var groupName = ""
+    @State private var groups: [String] = ["Basement", "1st Floor", "2nd Floor", "3rd Floor"]
+    
+    let columns = [
+        GridItem(.adaptive(minimum: 100, maximum: .infinity), spacing: 20)
+    ]
+    
+    
     var body: some View {
         Text("Name your household")
         
@@ -178,7 +188,7 @@ struct CreateView: View {
             .stroke(Color("text"))
             .frame(width: 350, height: 50)
             .overlay(alignment: .center){
-                TextField("Household Name", text: /*@START_MENU_TOKEN@*//*@PLACEHOLDER=Value@*/.constant("")/*@END_MENU_TOKEN@*/)
+                TextField("Household Name", text: $name)
                     .padding()
                     
             }
@@ -192,9 +202,10 @@ struct CreateView: View {
             .frame(width: 350, height: 50)
             .overlay(alignment: .center){
                 HStack{
-                    TextField("Group Name", text: /*@START_MENU_TOKEN@*//*@PLACEHOLDER=Value@*/.constant("")/*@END_MENU_TOKEN@*/)
+                    TextField("Group Name", text: $groupName)
                         .padding()
                     Button(action: {
+                        groups.append(groupName)
                         
                     }) {
                         Text("+")
@@ -214,31 +225,45 @@ struct CreateView: View {
             }
             .padding()
         
-        HStack {
-            Text("Basement")
-                .frame(width: 120, height: 40)
-                .background(Color("sec"))
-                .clipShape(RoundedRectangle(cornerRadius: 20))
-                
-            Text("1st Floor")
-                .frame(width: 120, height: 40)
-                .background(Color("sec"))
-                .clipShape(RoundedRectangle(cornerRadius: 20))
-            Text("2nd Floor")
-                .frame(width: 120, height: 40)
-                .background(Color("sec"))
-                .clipShape(RoundedRectangle(cornerRadius: 20))
-            
-            Spacer()
-                
+        ScrollView {
+            LazyVGrid(columns: columns, spacing: 16) {
+                ForEach(groups, id: \.self) { group in
+                    HStack {
+                        Text(group)
+                            .padding(.leading)
+                            .fixedSize(horizontal: true, vertical: false)
+                        Spacer()
+                        Button(action: {
+                            if let index = groups.firstIndex(of: group) {
+                                groups.remove(at: index)
+                            }
+                        }) {
+                            Image(systemName: "xmark.circle.fill")
+                                .foregroundColor(.gray)
+                        }
+                        .padding(.trailing)
+                    }
+                    .frame(height: 40)
+                    .background(Color("sec"))
+                    .clipShape(RoundedRectangle(cornerRadius: 20))
+                    .padding(.leading)
+                    .padding(.trailing)
+                    
+                }
+            }
+            .padding(15)
         }
+        
+                
+        
       //  .frame(alignment: .leading)
         
         
         
         
         Button(action: {
-            //
+            let household = Household(name: name, groups: groups)
+            saveHousehold(household: household)
         }) {
             Text("Create Household")
                 .bold()

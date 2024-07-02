@@ -82,14 +82,17 @@ class Event: Codable, Identifiable  {
 
 
 
-class Household {
+class Household: Codable, Identifiable {
     var id: UUID
     var name: String
+    var groups: [String]
     var users: [User]
     
-    init(name: String) {
+    
+    init(name: String, groups: [String]) {
         self.id = UUID()
         self.name = name
+        self.groups = groups
         self.users = []
     }
 

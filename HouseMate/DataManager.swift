@@ -20,7 +20,14 @@ func saveUser(user: User) {
     }
 }
 
-
+func saveHousehold(household: Household) {
+    let db = Firestore.firestore()
+    do {
+        try db.collection("households").document(household.id.uuidString).setData(from: household)
+    } catch let error {
+        print("Error writing household to Firestore: \(error)")
+    }
+}
 
 //func saveHousehold(household: Household) {
 //    let db = Firestore.firestore()
