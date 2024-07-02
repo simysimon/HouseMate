@@ -10,62 +10,108 @@ import SwiftUI
 import Firebase
 
 
-class User {
-    var id: UUID
-    var name: String
-    var tasks: [Task]
-    var threshold: Int
-    var progress: Int
-    var isSingle: Bool //single vs recurring
-    var isConstant: Bool //only applicable to recurring tasks: constant vs singular
-    var interval: String //only applicable to recurring tasks
-    var days: [String] //only applicable to
-    
-    
-    init(name: String, tasks: [Task], threshold: Int, isSingle: Bool, isConstant: Bool, interval: String, days: [String]) {
-        self.id = UUID()
-        self.name = name
-        self.tasks = []
-        self.threshold = threshold
-        self.progress = 0
-        self.isSingle = isSingle
-        self.isConstant = isConstant
-        self.interval = interval
-        self.days = []
-    }
-    
-    
-}
-class Task {
-    var name: String
-    
-    
-    init(name: String) {
-        self.name = name
-    }
-    
-    
-}
-class Expense {
-    var name: String
-    
-    
-    init(name: String) {
-        self.name = name
-    }
-    
-    
-}
-class Event {
-    var name: String
-    
-    
-    init(name: String) {
-        self.name = name
-    }
-    
-    
-}
+//class User {
+//    var id: UUID
+//    var name: String
+//    var tasks: [Task]
+//    var threshold: Int
+//    var progress: Int
+//    var isSingle: Bool //single vs recurring
+//    var isConstant: Bool //only applicable to recurring tasks: constant vs singular
+//    var interval: String //only applicable to recurring tasks
+//    var days: [String] //only applicable to
+//    
+//    
+//    init(name: String, tasks: [Task], threshold: Int, isSingle: Bool, isConstant: Bool, interval: String, days: [String]) {
+//        self.id = UUID()
+//        self.name = name
+//        self.tasks = []
+//        self.threshold = threshold
+//        self.progress = 0
+//        self.isSingle = isSingle
+//        self.isConstant = isConstant
+//        self.interval = interval
+//        self.days = []
+//    }
+//    
+//    
+//}
+//class Task {
+//    var name: String
+//    users[]
+//    threshold
+//    progress
+//    
+//    
+//    init(name: String) {
+//        self.name = name
+//    }
+//    
+//    
+//}
+//
+//
+//class singleTask {
+//    var name: String
+//    users[]
+//    threshold
+//    progress
+//    date
+//    
+//    init(name: String) {
+//        self.name = name
+//    }
+//    
+//    
+//}
+//class recurringConstantTask {
+//    var name: String
+//    users[]
+//    threshold
+//    progress
+//    interval
+//    
+//    init(name: String) {
+//        self.name = name
+//    }
+//    
+//    
+//}
+//class recurringSingularTask {
+//    var name: String
+//    users[]
+//    threshold
+//    progress
+//    interval
+//    days
+//    
+//    init(name: String) {
+//        self.name = name
+//    }
+//    
+//    
+//}
+//
+//class Expense {
+//    var name: String
+//    
+//    
+//    init(name: String) {
+//        self.name = name
+//    }
+//    
+//    
+//}
+//class Event {
+//    var name: String
+//    
+//    
+//    init(name: String) {
+//        self.name = name
+//    }
+//    
+//    
+//}
 
 
 

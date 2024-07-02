@@ -13,7 +13,7 @@ struct AuthenticationView: View {
     @State private var email = ""
     @State private var password = ""
     @State private var confirmPassword = ""
-
+    @Binding var isLoggedIn: Bool
     var body: some View {
         VStack {
             Text(isLoginMode ? "Login" : "Create Account")
@@ -31,6 +31,7 @@ struct AuthenticationView: View {
                 .padding(.bottom, 20)
 
             SecureField("Password", text: $password)
+                .textContentType(.newPassword)
                 .padding()
                 .background(Color.gray.opacity(0.2))
                 .cornerRadius(8)
@@ -38,6 +39,7 @@ struct AuthenticationView: View {
 
             if !isLoginMode {
                 SecureField("Confirm Password", text: $confirmPassword)
+                    .textContentType(.password)
                     .padding()
                     .background(Color.gray.opacity(0.2))
                     .cornerRadius(8)
@@ -71,22 +73,33 @@ struct AuthenticationView: View {
             
             print("Login with email: \(email), password: \(password)")
             
-            
+            isLoggedIn = true
+            print("isLoggedIn set to true")
             
             
         } else {
             // Handle create account action
             if password == confirmPassword {
-                Auth.auth().createUser(withEmail: email, password: password)
-                print("account created with \(email)")
-                
-            } else {
-                print("Passwords do not match")
+                Auth.auth().createUser(withEmail: email, password: password) { authResult, error in
+                    if let error = error {
+                        print("Error creating user: \(error.localizedDescription)")
+                        
+                    } else if authResult != nil {
+                        print("account created with \(email)")
+                        isLoggedIn = true
+                        print("isLoggedIn set to true")
+                    }
+                    
+                    
+                    
+                    }
+                } else {
+                    print("Passwords do not match")
             }
         }
     }
 }
 
-#Preview {
-    AuthenticationView()
-}
+//#Preview {
+//    AuthenticationView(isLoggedIn: $isLoggedIn)
+//}

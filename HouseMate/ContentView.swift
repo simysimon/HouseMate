@@ -8,32 +8,22 @@
 import SwiftUI
 
 struct ContentView: View {
-    
-    @State private var isNight = false
-    
+    @State private var isLoggedIn = false
     
     
     var body: some View {
         
-        TabView {
-            HomeView()
-                .tabItem() {
-                    Image(systemName: "house")
+        NavigationView {
+            VStack{
+                if isLoggedIn{
+                    HouseholdView()
+                } else {
+                    OnboardingView(isLoggedIn: $isLoggedIn)
                 }
-            TasksView()
-                .tabItem() {
-                    Image(systemName: "checkmark.circle")
-                }
-            ExpensesView()
-                .tabItem() {
-                    Image(systemName: "dollarsign.circle")
-                }
-            EventsView()
-                .tabItem() {
-                    Image(systemName: "calendar")
-                }
-            
+            }
         }
+        
+     
         
         
     }
@@ -43,3 +33,22 @@ struct ContentView: View {
     ContentView()
 }
 
+//TabView {
+//    HomeView()
+//        .tabItem() {
+//            Image(systemName: "house")
+//        }
+//    TasksView()
+//        .tabItem() {
+//            Image(systemName: "checkmark.circle")
+//        }
+//    ExpensesView()
+//        .tabItem() {
+//            Image(systemName: "dollarsign.circle")
+//        }
+//    EventsView()
+//        .tabItem() {
+//            Image(systemName: "calendar")
+//        }
+//    
+//}

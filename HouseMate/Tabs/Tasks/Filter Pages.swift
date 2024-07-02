@@ -1,5 +1,5 @@
 //
-//  Task Filter Pages.swift
+//  Filter Pages.swift
 //  HouseMate
 //
 //  Created by Simon Nguyen on 6/26/24.
