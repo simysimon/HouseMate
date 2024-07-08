@@ -13,14 +13,14 @@ struct MainView: View {
     
     var body: some View {
         NavigationView {
-            
-            if viewModel.isSignedIn, !viewModel.currentUserId.isEmpty {
-                accountView
-                
-            } else {
+        
+            if !viewModel.isSignedIn, viewModel.currentUserId.isEmpty{
                 LoginView()
+            } else if !viewModel.isJoinedHousehold {
+                HouseholdView().environmentObject(viewModel)
+            } else {
+                accountView
             }
-            
             
             
         }
@@ -32,27 +32,27 @@ struct MainView: View {
     
     @ViewBuilder
     var accountView: some View {
+        
         TabView {
-            TabView {
-                HomeView()
-                    .tabItem() {
-                        Image(systemName: "house")
-                    }
-                TasksView()
-                    .tabItem() {
-                        Image(systemName: "checkmark.circle")
-                    }
-                ExpensesView()
-                    .tabItem() {
-                        Image(systemName: "dollarsign.circle")
-                    }
-                EventsView()
-                    .tabItem() {
-                        Image(systemName: "calendar")
-                    }
-                
-            }
+            HomeView()
+                .tabItem() {
+                    Image(systemName: "house")
+                }
+            TasksView(userId: viewModel.currentUserId)
+                .tabItem() {
+                    Image(systemName: "checkmark.circle")
+                }
+            ExpensesView()
+                .tabItem() {
+                    Image(systemName: "dollarsign.circle")
+                }
+            EventsView()
+                .tabItem() {
+                    Image(systemName: "calendar")
+                }
+            
         }
+        
     }
 }
 

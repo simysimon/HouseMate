@@ -13,7 +13,11 @@ import SwiftUI
 struct HomeView : View {
     
     var body: some View {
-        Text("home view")
+        VStack {
+            Header(title: "Home", size: 60)
+            Spacer()
+
+        }
         
     }
     

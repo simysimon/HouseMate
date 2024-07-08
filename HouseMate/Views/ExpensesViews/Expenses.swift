@@ -13,7 +13,11 @@ import SwiftUI
 struct ExpensesView : View {
     
     var body: some View {
-        Text("expenses view")
+        VStack {
+            Header(title: "Expenses", size: 40)
+            Spacer()
+
+        }
         
     }
     

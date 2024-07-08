@@ -12,12 +12,11 @@ import SwiftUI
 
 //this is the common header for all the views
 struct Header: View {
-    var title : String
-    var size : CGFloat
+    @StateObject var viewModel = HeaderViewViewModel()
+    //@StateObject var tasksViewViewModel: TasksViewViewModel
+    let title : String
+    let size : CGFloat
     
-    @Binding var  isBell : Bool
-    @Binding var  isProfile : Bool
-    @Binding var isDropdown : Bool
     
     var body: some View {
         HStack{
@@ -28,23 +27,36 @@ struct Header: View {
                 .foregroundColor(Color("text"))
             
             
-            
-            Button(action: {
-                withAnimation{
-                    isDropdown.toggle()
+            if title != "Home" {
+                Button(action: {
+                    withAnimation{
+                        viewModel.isAdd.toggle()
+                    }
+                }) {
+                    Image(systemName: "plus")
+                        .resizable()
+                        .aspectRatio(contentMode: .fit)
+                        .frame(width: 25, height: 25)
+                        .foregroundColor(Color("text"))
                 }
-            }) {
-                Image(systemName: "chevron.down")
-                    .resizable()
-                    .aspectRatio(contentMode: .fit)
-                    .frame(width: 25, height: 25)
-                    .foregroundColor(Color("text"))
+                .sheet(isPresented: $viewModel.isAdd) {
+                    if title == "Tasks" {
+                        CreateTaskView(newTaskPresented: $viewModel.isAdd)
+                    }
+                    if title == "Expenses" {
+                        
+                    }
+                    if title == "Events" {
+                        
+                    }
+                }
             }
+            
             
             Spacer()
             Button(action: {
                 withAnimation{
-                    isBell.toggle()
+                    viewModel.isBell.toggle()
                 }
                 
             }) {
@@ -55,12 +67,9 @@ struct Header: View {
                     .foregroundColor(Color("text"))
             }
             
-            
-            
-            
             Button(action: {
                 withAnimation{
-                    isProfile.toggle()
+                    viewModel.isProfile.toggle()
                 }
                 
             }) {
@@ -71,7 +80,9 @@ struct Header: View {
                     .foregroundColor(Color("text"))
             }
             .padding()
-            
+            .sheet(isPresented: $viewModel.isProfile) {
+                ProfileView()
+            }            
             
             
             
@@ -81,6 +92,38 @@ struct Header: View {
 }
 
 
+
+struct HMButton: View {
+    let title: String
+    let background: Color
+    let action: () -> Void
+    
+    var body: some View {
+        Button {
+            action()
+        } label: {
+            
+            Text(title)
+                .foregroundColor(Color("background"))
+                .padding()
+                .frame(maxWidth: .infinity)
+                .background(background)
+                .cornerRadius(30)
+        }
+        .padding()
+    }
+    
+}
+
+
+
+
+#Preview{
+    //Header(title: "Tasks", size: 60)
+    HMButton(title: "Value", background: Color("accent")){
+        print("login button pressed")
+    }
+}
 
 //this is the 2option toggle button, currently only 2 parameters for the options. should add more in future for dimensions and more options.
 struct toggleButton: View {

@@ -38,11 +38,9 @@ extension Date {
 
 struct EventsView: View {
     @State private var selectedOption: Int = 2
-    @State private var isBell: Bool = false
     @State private var selectedDate: Date? = nil  // State to track the selected date
     @State private var currentMonth: Date = Date()  // State to track the current month
-    @State private var isProfile = false
-    @State private var isDropdown = false
+
 
     // Placeholder for future user-created events
     @State private var events: [Eventt] = [
@@ -58,7 +56,7 @@ struct EventsView: View {
                 .edgesIgnoringSafeArea(.all)
 
             VStack {
-                Header(title: "Events", size: 60, isBell: $isBell, isProfile: $isProfile, isDropdown: $isDropdown)
+                Header(title: "Events", size: 60)
 
                 HStack {
                     threeToggleButton(optionA: "Upcoming",

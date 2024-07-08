@@ -6,3 +6,13 @@
 //
 
 import Foundation
+
+class TaskCardViewViewModel: ObservableObject {
+    
+    init() {
+    
+    }
+    
+    
+    
+}
