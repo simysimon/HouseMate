@@ -11,23 +11,23 @@ import FirebaseFirestore
 
 
 
-func saveUser(user: User) {
-    let db = Firestore.firestore()
-    do {
-        try db.collection("users").document(user.id.uuidString).setData(from: user)
-    } catch let error {
-        print("Error writing user to Firestore: \(error)")
-    }
-}
-
-func saveHousehold(household: Household) {
-    let db = Firestore.firestore()
-    do {
-        try db.collection("households").document(household.id.uuidString).setData(from: household)
-    } catch let error {
-        print("Error writing household to Firestore: \(error)")
-    }
-}
+//func saveUser(user: User) {
+//    let db = Firestore.firestore()
+//    do {
+//        try db.collection("users").document(user.id.uuidString).setData(from: user)
+//    } catch let error {
+//        print("Error writing user to Firestore: \(error)")
+//    }
+//}
+//
+//func saveHousehold(household: Household) {
+//    let db = Firestore.firestore()
+//    do {
+//        try db.collection("households").document(household.id.uuidString).setData(from: household)
+//    } catch let error {
+//        print("Error writing household to Firestore: \(error)")
+//    }
+//}
 
 //func saveHousehold(household: Household) {
 //    let db = Firestore.firestore()
