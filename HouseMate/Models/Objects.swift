@@ -8,14 +8,6 @@
 import Foundation
 import SwiftUI
 import Firebase
-//    var threshold: Int
-//    var progress: Int
-//    var isSingle: Bool //single vs recurring
-//    var isConstant: Bool //only applicable to recurring tasks: constant vs singular
-//    var interval: String //only applicable to recurring tasks
-//    var days: [String] //only applicable to
-//
-
 
 class User: Codable, Identifiable {
     var id: UUID
@@ -35,12 +27,29 @@ class User: Codable, Identifiable {
     
     
 }
-class Task: Codable, Identifiable {
+//    var threshold: Int
+//    var progress: Int
+//    var isSingle: Bool //single vs recurring
+//    var isConstant: Bool //only applicable to recurring tasks: constant vs singular
+//    var interval: String //only applicable to recurring tasks
+//    var days: [String] //only applicable to
+//
+
+protocol TaskProtocol: Identifiable, Codable {
+    var id: UUID { get }
+    var name: String { get }
+    var users: [User] { get }
+    var threshold: Int { get }
+    var progress: Int { get }
+}
+
+class Task: TaskProtocol {
     var id: UUID
     var name: String
     var users: [User]
     var threshold: Int
     var progress: Int
+    
     
     
     init(name: String, users: [User], threshold: Int) {
@@ -53,6 +62,48 @@ class Task: Codable, Identifiable {
     
     
 }
+
+
+
+class singleTask: Task {
+    var date: Date
+
+    init(name: String, users: [User], threshold: Int, date: Date) {
+        self.date = date
+        super.init(name: name, users: users, threshold: threshold)
+    }
+    
+    required init(from decoder: any Decoder) throws {
+        fatalError("init(from:) has not been implemented")
+    }
+}
+
+
+//class recurringConstantTask: Task {
+//    var interval: Int
+//
+//    init(name: String, users: [User], threshold: Int, interval: ) {
+//        self.name = name
+//    }
+//}
+
+//class recurringSingularTask: Task {
+//    interval
+//    days
+//
+//    init(name: String) {
+//        self.name = name
+//    }
+//
+//
+//}
+
+
+
+
+
+
+
 
 class Expense: Codable, Identifiable  {
     var id: UUID
@@ -99,49 +150,7 @@ class Household: Codable, Identifiable {
 }
 
 
-//
-//
-//class singleTask {
-//    var name: String
-//    users[]
-//    threshold
-//    progress
-//    date
-//
-//    init(name: String) {
-//        self.name = name
-//    }
-//
-//
-//}
-//class recurringConstantTask {
-//    var name: String
-//    users[]
-//    threshold
-//    progress
-//    interval
-//
-//    init(name: String) {
-//        self.name = name
-//    }
-//
-//
-//}
-//class recurringSingularTask {
-//    var name: String
-//    users[]
-//    threshold
-//    progress
-//    interval
-//    days
-//
-//    init(name: String) {
-//        self.name = name
-//    }
-//
-//
-//}
-//
+
 
 
 //-------------------------------------------------------------------------------
@@ -180,10 +189,10 @@ struct Notification : View {
     }
 }
 struct TaskCard : View {
-    
-    var title: String
+    let task: any TaskProtocol
+    //var title: String
     var date: String
-    var threshold: Int
+    //var threshold: Int
 
     var body: some View {
         
@@ -214,7 +223,7 @@ struct TaskCard : View {
                     }
                 )
             VStack {
-                Text(title)
+                Text(task.name)
                     .font(.system(size: 23, weight: .semibold))
                     .foregroundColor(Color("text"))
                     .padding(.top)
@@ -225,7 +234,7 @@ struct TaskCard : View {
                 
                 
                 HStack {
-                    ForEach(0..<threshold, id: \.self) { _ in
+                    ForEach(0..<task.threshold, id: \.self) { _ in
                         Image(systemName: "circle.dotted")
                             .frame(maxWidth: 20, alignment: .leading)
                             .padding(.leading, -10)

@@ -19,7 +19,10 @@ struct TasksView: View {
     @State private var isDropdown: Bool = false
     @State private var isAdd: Bool = true
     @State private var isGroups: Bool = true
-    
+    @State private var isSingle: Bool = true
+    @State private var isConstant: Bool = true
+    @State private var dateString: String = ""
+
     var body: some View {
         ZStack {
             Color("background")
@@ -88,10 +91,10 @@ struct TasksView: View {
             }
             
             if isAdd{
-                popupAdd(isAdd: $isAdd, isGroups: $isGroups)
+                //popupAdd(isAdd: $isAdd, isGroups: $isGroups, isSingle: $isSingle, isConstant: $isConstant)
+                taskCreationView(isAdd: $isAdd, isGroups: $isGroups, isSingle: $isSingle, dateString: $dateString)
+                
             }
-        
-            
                 
         
             

@@ -156,7 +156,7 @@ struct threeToggleButton: View {
             // Sliding highlight layer
             RoundedRectangle(cornerRadius: 30)
                 .fill(Color("accent"))
-                .frame(width: 90, height: 30)
+                .frame(width: 80, height: 30)
                 .offset(x: selectedOption == 0 ? -90 : selectedOption == 1 ? 0 : 90)
 
             // Text buttons layer
@@ -164,6 +164,7 @@ struct threeToggleButton: View {
                 Button(action: {
                     withAnimation(.easeInOut) {
                         selectedOption = 0
+                        print("selected option: 0")
                     }
                 }) {
                     Text(optionA)
@@ -177,6 +178,8 @@ struct threeToggleButton: View {
                 Button(action: {
                     withAnimation(.easeInOut) {
                         selectedOption = 1
+                        print("selected option: 1")
+
                     }
                 }) {
                     Text(optionB)
@@ -190,6 +193,8 @@ struct threeToggleButton: View {
                 Button(action: {
                     withAnimation(.easeInOut) {
                         selectedOption = 2
+                        print("selected option: 2")
+
                     }
                 }) {
                     Text(optionC)

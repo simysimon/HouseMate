@@ -101,6 +101,7 @@ struct HouseholdView: View {
     @State private var isLoginMode = true
     @State private var isJoin = false
     @Binding var isOnboard: Bool
+    @State var inviteCode = ""
     
     
     var body: some View {
@@ -119,7 +120,7 @@ struct HouseholdView: View {
                 
                 
                 if isJoin {
-                    JoinView()
+                    JoinView(inviteCode: $inviteCode)
                         .transition(.move(edge: .leading))
                 } else {
                     CreateView(isOnboard: $isOnboard)
@@ -138,6 +139,8 @@ struct HouseholdView: View {
 }
 
 struct JoinView: View {
+    //TODO: invite code for a user to join a household
+    @Binding var inviteCode: String
     var body: some View {
         VStack{
             
@@ -148,7 +151,7 @@ struct JoinView: View {
                 .stroke(Color("text"))
                 .frame(width: 350, height: 50)
                 .overlay(alignment: .center){
-                    TextField("Invite Code", text: /*@START_MENU_TOKEN@*//*@PLACEHOLDER=Value@*/.constant("")/*@END_MENU_TOKEN@*/)
+                    TextField("Invite Code", text: $inviteCode)
                         .padding()
                         
                 }
@@ -270,6 +273,9 @@ struct CreateView: View {
             
             isOnboard = true
             print("isOnboard set to true")
+            
+            
+            
         }) {
             Text("Create Household")
                 .bold()
